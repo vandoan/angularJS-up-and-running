@@ -13,23 +13,27 @@
 	<div ng-switch on='mainCtrl.tab'>
 		
 		<div ng-switch-when='first'>
-			<h3>First tab</h3>
-			<ul>
-				<li ng-repeat='item in ctrl.list'>
-					<span ng-bind='item.label'></span>
-				</li>
-			</ul>
-			<button ng-click='ctrl.add()'>Add More Items</button>
+			<div ng-controller='SubCtrl as ctrl'>
+				<h3>First tab</h3>
+				<ul>
+					<li ng-repeat='item in ctrl.list'>
+						<span ng-bind='item.label'></span>
+					</li>
+				</ul>
+				<button ng-click='ctrl.add()'>Add More Items</button>
+			</div>
 		</div>
 
 		<div ng-switch-when='second'>
-			<h3>Second tab</h3>
-			<ul>
-				<li ng-repeat='item in ctrl.list'>
-					<span ng-bind='item.label'></span>
-				</li>
-			</ul>
-			<button ng-click='ctrl.add()'>Add More Items</button>
+			<div ng-controller='SubCtrl as ctrl'>
+				<h3>Second tab</h3>
+				<ul>
+					<li ng-repeat='item in ctrl.list'>
+						<span ng-bind='item.label'></span>
+					</li>
+				</ul>
+				<button ng-click='ctrl.add()'>Add More Items</button>
+			</div>
 		</div>
 
 	</div>
